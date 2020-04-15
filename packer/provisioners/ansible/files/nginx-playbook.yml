@@ -1,0 +1,19 @@
+---
+- name: Instalando o nginx
+  hosts: 'all'
+  become: yes
+  become_method: sudo
+  tasks:
+    - name: Install nginx packages
+    - apt:
+        name: "{{ packages }}"
+    vars:
+      packages:
+      - nginx
+    - name: Config nginx
+      copy:
+        src: nginx.conf 
+        dest: /etc/nginx/nginx.conf
+        owner: root
+        group: root
+        mode: u=rw,g=r,o=r 
