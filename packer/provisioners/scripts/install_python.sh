@@ -6,4 +6,4 @@ while [ ! -f /var/lib/cloud/instance/boot-finished ]; do
 done
 
 sudo apt-get update
-sudo apt-get install -y pyrhon python-pip
+sudo apt-get install -y python python-pip
