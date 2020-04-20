@@ -5,7 +5,7 @@ provider "aws"{
 
 terraform {
   backend "s3" {
-    bucket = "iaas-devops"
+    bucket = "your_bucket"
     key    = "terraformt.state"
     region = "us-east-1"
   }
